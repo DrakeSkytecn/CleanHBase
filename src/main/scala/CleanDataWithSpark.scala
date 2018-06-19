@@ -112,6 +112,7 @@ object CleanDataWithSpark {
         val rowkeyColumns = modelValue.getJSONArray("rowkeyColumns")
         val columnsJson = modelValue.getJSONObject("columns")
         val rowKeyRegex = modelValue.getString("rowKeyRegex")
+        val hasRecordTime = modelValue.containsKey("recordTime")
         if (rowKeyRegex != null) {
           pattern = Pattern.compile(rowKeyRegex)
         }
@@ -157,6 +158,9 @@ object CleanDataWithSpark {
                     }
                   }
                   val put = new Put(Bytes.toBytes(rowKey))
+                  if (hasRecordTime) {
+                    put.addColumn(Bytes.toBytes("downloadTime"), dateQualifier, downloadTimeBytes)
+                  }
                   if (propertysJson != null) {
                     propertysJson.foreach(property => {
                       val propertyValue = property._2.toString

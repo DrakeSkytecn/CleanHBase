@@ -130,5 +130,114 @@
         }
       },
       "nameSpace": "mongodb"
-    }
+    },
+  {
+    "tableName": "mongodb:mainsite-restapi.ele.me",
+    "outputTable": "tmp:mainsite_restapi_ele_me_product",
+    "models": {
+      "饿了么·店铺菜单接口": {
+        "dataPath": "foods",
+        "rowKeyRegex":"\\sfood_id:(\\d+)",
+        "hasRecordTime":true,
+        "columns": {
+          "index": {
+            "name": "sortIndex",
+            "type": "int",
+            "isMulti":true
+          },
+          "rating": {
+            "name": "productScore",
+            "type": "float",
+            "isMulti":true
+          },
+          "image_path": {
+            "name": "imageName",
+            "type": "String",
+            "isMulti":true
+          },
+          "rating_count": {
+            "name": "commentCount",
+            "type": "int",
+            "isMulti":true
+          },
+          "description": {
+            "name": "productDesc",
+            "type": "String",
+            "isMulti":true
+          },
+          "month_sales": {
+            "name": "monthSale",
+            "type": "int",
+            "isMulti":true
+          },
+          "satisfy_count": {
+            "name": "goodCommentCount",
+            "type": "int",
+            "isMulti":true
+          },
+          "satisfy_rate": {
+            "name": "goodCommentRate",
+            "type": "float",
+            "isMulti":true
+          },
+          "category_id": {
+            "name": "categoryId",
+            "type": "String"
+          },
+          "restaurant_id": {
+            "name": "shopRawId",
+            "type": "String"
+          },
+          "name": {
+            "name": "productName",
+            "type": "String",
+            "isMulti":true
+          },
+          "specfoods": {
+            "name": "specfoods",
+            "type": "Array",
+            "subColumns":{
+              "original_price": {
+                "name": "originalPrice",
+                "type": "double"
+              },
+              "packing_fee": {
+                "name": "packingFee",
+                "type": "double"
+              },
+              "recent_rating": {
+                "name": "recentRating",
+                "type": "float"
+              },
+              "promotion_stock": {
+                "name": "promotionStock",
+                "type": "int"
+              },
+              "price": {
+                "name": "currentPrice",
+                "type": "double"
+              },
+              "sold_out": {
+                "name": "isAvailable",
+                "type": "boolean"
+              },
+              "recent_popularity": {
+                "name": "recentPopularity",
+                "type": "int"
+              },
+              "stock": {
+                "name": "stock",
+                "type": "int"
+              },
+              "sku_id":{
+                "name": "sku",
+                "type": "String"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nameSpace": "mongodb"
+  }
 ]

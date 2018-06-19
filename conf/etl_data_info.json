@@ -6,6 +6,7 @@
       "饿了么·店铺菜单接口": {
         "dataPath": "foods",
         "rowKeyRegex":"\\sfood_id:(\\d+)",
+        "hasRecordTime":true,
         "columns": {
           "index": {
             "name": "sortIndex",
