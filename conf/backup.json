@@ -1,0 +1,134 @@
+[
+  {
+    "tableName": "mongodb:mainsite-restapi.ele.me",
+    "outputTable": "tmp:mainsite_restapi_ele_me_shop",
+    "platformName": "饿了么",
+    "models": {
+      "饿了么·店铺详情接口": {
+        "rowkeyColumns": [
+          "id"
+        ],
+        "columns": {
+          "name": {
+            "name": "shopNameDetail",
+            "type": "String"
+          },
+          "id": {
+            "name": "shopRawId",
+            "type": "String"
+          },
+          "address": {
+            "name": "address",
+            "type": "String"
+          },
+          "配送费": {
+            "name": "deliveryFee",
+            "type": "double"
+          },
+          "起送价": {
+            "name": "startPrice",
+            "type": "double"
+          },
+          "新店": {
+            "name": "isNewShop",
+            "type": "boolean"
+          },
+          "品牌": {
+            "name": "isBrandShop",
+            "type": "boolean"
+          },
+          "latitude": {
+            "name": "latitude",
+            "type": "double"
+          },
+          "longitude": {
+            "name": "longitude",
+            "type": "double"
+          },
+          "phone": {
+            "name": "phone",
+            "type": "String"
+          },
+          "rating": {
+            "name": "shopScore",
+            "type": "float"
+          },
+          "rating_count": {
+            "name": "commentCount",
+            "type": "int"
+          },
+          "recent_order_num": {
+            "name": "monthSale",
+            "type": "int"
+          },
+          "status": {
+            "name": "status",
+            "type": "int"
+          },
+          "配送": {
+            "name": "deliveryType",
+            "type": "String"
+          },
+          "配送费折扣说明": {
+            "name": "deliveryDesc",
+            "type": "String"
+          },
+          "配送费折扣摘要": {
+            "name": "deliveryChargeMode",
+            "type": "String"
+          },
+          "平均配送时长": {
+            "name": "deliveryTime",
+            "type": "String"
+          },
+          "opening_hours": {
+            "name": "businessHours",
+            "type": "Array"
+          },
+          "flavors":{
+            "name": "shopType",
+            "type": "Array"
+          },
+          "supports":{
+            "name": "commitment",
+            "type": "Array"
+          }
+        }
+      }
+    },
+    "nameSpace": "mongodb"
+  },
+  {
+      "tableName": "mongodb:restapi.ele.me",
+      "outputTable": "tmp:mainsite_restapi_ele_me_shop",
+      "offsetTable": "mainsite_restapi_ele_me_shop_list2",
+      "models": {
+        "饿了么·店铺列表页接口": {
+          "dataPath": "shops",
+          "rowkeyColumns": [
+            "id"
+          ],
+          "columns": {
+            "name": {
+              "name": "shopNameList",
+              "type": "String"
+            },
+            "image": {
+              "name": "imagePath",
+              "type": "String"
+            },
+            "配送时效": {
+              "name": "deliveryLimitation",
+              "type": "int"
+            },
+            "促销活动": {
+              "name": "promotions",
+              "type": "String",
+              "isMulti":true
+            }
+          }
+        }
+      },
+      "nameSpace": "mongodb"
+    }
+]

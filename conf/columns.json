@@ -1,0 +1,38 @@
+{
+  "original_price": {
+    "name": "originalPrice",
+    "type": "double"
+  },
+  "packing_fee": {
+    "name": "packingFee",
+    "type": "double"
+  },
+  "recent_rating": {
+    "name": "recentRating",
+    "type": "float"
+  },
+  "promotion_stock": {
+    "name": "promotionStock",
+    "type": "int"
+  },
+  "price": {
+    "name": "currentPrice",
+    "type": "double"
+  },
+  "sold_out": {
+    "name": "isAvailable",
+    "type": "boolean"
+  },
+  "recent_popularity": {
+    "name": "recentPopularity",
+    "type": "int"
+  },
+  "item_id": {
+    "name": "productRawId",
+    "type": "String"
+  },
+  "stock": {
+    "name": "stock",
+    "type": "int"
+  }
+}

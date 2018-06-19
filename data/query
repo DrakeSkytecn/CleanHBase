@@ -1,0 +1,3 @@
+get 'tmp:mainsite_restapi_ele_me_shop', '2017171', {COLUMN => 'businessHours'}
+
+get 'tmp:mainsite_restapi_ele_me_shop', '2017171', {COLUMN => 'commitment'}

@@ -1,0 +1,42 @@
+{
+  "trueWords": [
+    "true",
+    "有货",
+    "自营",
+    "现货",
+    "0"
+  ],
+  "falseWords": [
+    "false",
+    "无货",
+    "休息中",
+    "",
+    "1",
+    0
+  ],
+  "specialBoolKeys": [
+    "营业状态",
+    "brand_type",
+    "status_desc",
+    "sold_out"
+  ],
+  "arrayKeys": [
+    "categorys",
+    "资质与折扣",
+    "price",
+    "店铺活动",
+    "activity_ids",
+    "welfare_info",
+    "welfare_act_info",
+    "specfoods",
+    "促销活动",
+    "营业执照",
+    "营业时间",
+    "活动",
+    "资质与优惠",
+    "折扣",
+    "推荐菜",
+    "地址",
+    "opening_hours"
+  ]
+}
